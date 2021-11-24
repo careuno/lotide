@@ -31,12 +31,12 @@ const assertEqual = function(actual,expected) {
 // }
 
 // you need to check length of arrays if they match first,
-// cause if it doesn't you can return false and end right away.
+// cause if it doesn't you can return false and end function right away.
 
-//In this example you use one for loop and since we've already check array length,
+// In this example you use one for loop and since we've already check array length,
 // you won't risk an Error with mismatched lengths and the stopping condition for one
 // will work for the other since they are equal.
-// Since you have one for loop that applies to both arrays, you can share the same index [i] with both.
+// NOTE: Since you have only one for loop that applies to both arrays, you can share the same index [i] with both.
 
 
 const eqArrays = (array1, array2) => {
