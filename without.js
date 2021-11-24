@@ -46,6 +46,7 @@ const without = (sourceArray, itemsToRemove) => {
   };
 
   //if (!isEqual) === if (isEqual === false)
+  //using let isEqual = false is an example of a FLAG
 
   console.log(without([1, 2, 3], [1]))
   console.log(without(["1", "2", "3"], [1, 2, "3"]))
