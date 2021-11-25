@@ -14,7 +14,7 @@ const eqArrays = (array1, array2) => {
 //an appropriate message to the console.
 
 const assertArraysEqual = (array1, array2) => {
-  if (eqArrays(array1,array2)) {
+  if (eqArrays(array1, array2)) {
     console.log(`✅ Assertion Passed: ${array1} === ${array2}`);
   } else {
     console.log(`❌ Assertion Failed: ${array1} !== ${array2}`);
@@ -36,17 +36,18 @@ const assertArraysEqual = (array1, array2) => {
 
 const middle = (array) => {
   if (array.length === 1 || array.length === 2) {
+    //if ([0,1,2].includes(array.length)) {  //this says if array.length is 0,1,2, it will return empty array
+    //if (array.length <=2) { //is also another way
     return [];
-  }
-  else if (array.length % 2 !== 0) {
-    return [(array[(array.length - 1) / 2 ])];
-} else {
-    return [array[((array.length/2)-1)] , array[(array.length/2)]];
-  }
+  } else if (array.length % 2 !== 0) {
+    return [(array[(array.length - 1) / 2])];
+  } //else {
+  return [array[((array.length / 2) - 1)], array[(array.length / 2)]];
+  //}
 };
-console.log(middle(['cat','dog','lizard','chicken'])); // returns: ['dog','lizard']
-console.log(middle(['cat','dog','lizard','chicken','pizza'])); // returns: ['lizard']
-console.log(middle([1,5,6,9,10,25,78,21,90])); // returns: [10]
+console.log(middle(['cat', 'dog', 'lizard', 'chicken'])); // returns: ['dog','lizard']
+console.log(middle(['cat', 'dog', 'lizard', 'chicken', 'pizza'])); // returns: ['lizard']
+console.log(middle([1, 5, 6, 9, 10, 25, 78, 21, 90])); // returns: [10]
 console.log(middle([1])); //returns: []
 console.log(middle(['cat'])); // returns: []
 console.log(middle([])); //returns: ?
@@ -54,7 +55,7 @@ console.log(middle(['print', 'this', 'that', 'now'])); //returns: ['this','that'
 
 //Test Code
 const words = ["hello", "world", "lighthouse"];
-assertArraysEqual(middle(words), ["world"]);
+assertArraysEqual(middle(words), ["world"], true);
 
-const animals = ['cat','dog','lizard','chicken','pizza'];
-assertArraysEqual(middle(animals), ['lizard']);
+const animals = ['cat', 'dog', 'lizard', 'chicken', 'pizza'];
+assertArraysEqual(middle(animals), ['pizza'], false);
