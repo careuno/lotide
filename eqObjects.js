@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -27,13 +27,13 @@ const eqArrays = (array1, array2) => {
 //if it's an array than use eqArrays
 //if these arrays are not equal then return false
 
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
   }
-  for (key in object1) {
+  for (let key in object1) {
     if (Array.isArray(object1[key])) {
-      const arrayIsEqual = eqArrays(object1[key], object2[key])
+      const arrayIsEqual = eqArrays(object1[key], object2[key]);
       if (!arrayIsEqual) {
         return false;
       }
@@ -42,7 +42,7 @@ const eqObjects = function (object1, object2) {
       //set a variable to equal what you pass to eqObjects similar to line 36
       // if that variable isn't true {
       // return false; again like line 38
-    } else if (object1[key] !== object2[key]) { 
+    } else if (object1[key] !== object2[key]) {
       return false;
     }
   }
