@@ -15,15 +15,15 @@ const assertEqual = function(actual,expected) {
 const countLetters = function(strings) {
   const results = {};
   let noSpaceStrings = strings.replace(/\s/g,'');
-  for (const noSpaceString of noSpaceStrings) {
+  for (const noSpaceString of noSpaceStrings) { // noSpaceString can be changed to character to be more accurate
      
-    if (noSpaceString) {
+    //if (noSpaceString) {
       if (results[noSpaceString]) {
         results[noSpaceString] += 1;
       } else {
         results[noSpaceString] = 1;
       }
-    }
+   // }
   }
   return results;
 };
