@@ -42,17 +42,17 @@ const assertArraysEqual = (array1, array2) => {
 
 const takeUntil = function(array, callback) {
   let result = [];
-  for (let element of array){ 
-    if (callback(element)){ // if true
+  for (let element of array) {
+    if (callback(element)) {// if true
       return result;
     } else { // if false
       result.push(element);
     }
   }
-  return result;  
-}
+  return result;
+};
 
-//Since takeUntil returns arrays, the best assertion function to use 
+//Since takeUntil returns arrays, the best assertion function to use
 //would be assertArraysEqual to compare its return value against an expected array.
 
 //Expected Input
@@ -68,8 +68,8 @@ console.log(results2);
 
 
 // assertArraysEqual(variableOfHighOrderFunction, expected output)
-assertArraysEqual(results1,[1, 2, 5, 7, 2])
-assertArraysEqual(results2,['I\'ve', 'been', 'to', 'Hollywood'])
+assertArraysEqual(results1,[1, 2, 5, 7, 2]);
+assertArraysEqual(results2,['I\'ve', 'been', 'to', 'Hollywood']);
 
 // if the callback implied return doesn't exist then all the elements will be pushed into the results array and basically return the same array you had at input
 
