@@ -6,9 +6,12 @@ const assertEqual = function(actual,expected) {
   }
 };
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("cat", "cat");
-assertEqual(1, 6);
 
+
+module.exports = assertEqual; // Notice how we are passing the variable assertEqual 
+// //(which points to our function) and not calling assertEqual via assertEqual() here. 
+// //This is an important distinction.
+
+// module.exports = {  // commonly expressed this way in a object and with keys
+//   assertEqual : assertEqual
+// };
