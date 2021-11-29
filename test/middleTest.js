@@ -1,19 +1,33 @@
 
-const assertArraysEqual = require('../assertArraysEqual');
-const middle = require('../middle');
+// const assertArraysEqual = require('../assertArraysEqual');
+// const middle = require('../middle');
 
 
-console.log(middle(['cat', 'dog', 'lizard', 'chicken'])); // returns: ['dog','lizard']
-console.log(middle(['cat', 'dog', 'lizard', 'chicken', 'pizza'])); // returns: ['lizard']
-console.log(middle([1, 5, 6, 9, 10, 25, 78, 21, 90])); // returns: [10]
-console.log(middle([1])); //returns: []
-console.log(middle(['cat'])); // returns: []
-console.log(middle([])); //returns: ?
-console.log(middle(['print', 'this', 'that', 'now'])); //returns: ['this','that']
+// console.log(middle(['cat', 'dog', 'lizard', 'chicken'])); // returns: ['dog','lizard']
+// console.log(middle(['cat', 'dog', 'lizard', 'chicken', 'pizza'])); // returns: ['lizard']
+// console.log(middle([1, 5, 6, 9, 10, 25, 78, 21, 90])); // returns: [10]
+// console.log(middle([1])); //returns: []
+// console.log(middle(['cat'])); // returns: []
+// console.log(middle([])); //returns: ?
+// console.log(middle(['print', 'this', 'that', 'now'])); //returns: ['this','that']
 
-//Test Code
-const words = ["hello", "world", "lighthouse"];
-assertArraysEqual(middle(words), ["world"], true);
+// //Test Code
+// const words = ["hello", "world", "lighthouse"];
+// assertArraysEqual(middle(words), ["world"], true);
 
-const animals = ['cat', 'dog', 'lizard', 'chicken', 'pizza'];
-assertArraysEqual(middle(animals), ['pizza'], false);
+// const animals = ['cat', 'dog', 'lizard', 'chicken', 'pizza'];
+// assertArraysEqual(middle(animals), ['pizza'], false);
+
+
+
+const assert = require('chai').assert;
+const middle   = require('../middle');
+
+describe("#middle", () => {
+  it('returns ["world"] for ["hello", "world", "lighthouse"]', () => {
+    assert.deepEqual(middle(["hello", "world", "lighthouse"]),["world"]);
+  });
+  it("returns ['lizard'] for ['cat', 'dog', 'lizard', 'chicken', 'pizza']", () => {
+    assert.deepEqual(middle(['cat', 'dog', 'lizard', 'chicken', 'pizza']), ['lizard']); 
+  });
+});
