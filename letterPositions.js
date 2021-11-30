@@ -59,3 +59,5 @@ assertArraysEqual(letterPositions("hello").e, [1]);
 // indices which are needed for the results. Alternatively you could use for..of to 
 // loop over the string but then manage your own 0-based counter using a variable 
 // and incrementing it within the loop.
+
+module.exports = letterPositions;

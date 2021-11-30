@@ -93,3 +93,6 @@ assertEqual(eqObjects(cd, dc), true);
 //   }
 //   return true;
 //};
+
+
+module.exports = eqObjects;

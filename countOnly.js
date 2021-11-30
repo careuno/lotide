@@ -97,3 +97,4 @@ assertEqual(result1["Agouhanna"], undefined);
 
 //you don't need to pass info to all parameters for code to run, ready for future use in function
 
+module.exports = countOnly;

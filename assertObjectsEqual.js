@@ -64,3 +64,6 @@ assertObjectsEqual(cd, dc);
 // Not very descriptive and will not help when debugging
 // workaround, modify function to use util library's inspect function
 //https://web.compass.lighthouselabs.ca/cce0707b-2160-470b-bc43-98f3f7d10da4
+
+
+module.exports = assertObjectsEqual;

@@ -49,3 +49,5 @@ assertArraysEqual(results2, [21, 31, 41, 51, 61])
 assertArraysEqual(results3, ["balls", "hats", "cups", "tables"])
 
 // worked together with Sam Leung to make test cases
+
+module.exports = map;
