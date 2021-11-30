@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@karuno/lotide",
   "version": "1.0.0",
   "main": "assertArraysEqual.js",
   "directories": {
@@ -12,13 +12,16 @@
     "type": "git",
     "url": "git+https://github.com/careuno/lotide.git"
   },
-  "author": "",
+  "author": {
+    "name" : "Karen N",
+    "email" : "karen.parkside@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/careuno/lotide/issues"
   },
   "homepage": "https://github.com/careuno/lotide#readme",
-  "description": "",
+  "description": "An simple introductory library similar to lodash, to manipulate arrays in different ways and make assertions",
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^9.1.3"
