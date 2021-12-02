@@ -18,7 +18,7 @@ const eqArrays = (array1, array2) => {
   return true;
 };
 
-// Function takses two objects
+// Function takes two objects
 // Returns T/F based on match
 
 // Returns true if both objects have identical keys with identical values.
